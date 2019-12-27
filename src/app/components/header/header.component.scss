@@ -1,0 +1,27 @@
+@import '../../../assets/styles/_variables.scss';
+
+.header{
+  background: $secondary-bg;
+  color: $primary-text-color;
+  padding: 1rem 0;
+  border-bottom: 1px solid  rgba(0,0,0,0.21);
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img{
+    width: 10rem;
+  }
+  ul{
+    list-style: none;
+    li{
+      list-style: none;
+      display: inline-block;
+      padding: 0 1rem;
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+  }
+}

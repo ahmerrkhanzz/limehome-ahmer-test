@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container-fluid">
+
+  <div class="column-25">
+    <app-grid-card [places]="places"></app-grid-card>
+  </div>
+  <div class="column-75">
+    <span class="loader" *ngIf="loading">
+      <img src="../assets/images/loader.png" alt="">
+      Fetching Map...
+    </span>
+    <app-here-map [places]="places" *ngIf="!loading"></app-here-map>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

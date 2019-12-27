@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let place of places">
+    <div class="card" [ngClass]="{'active': selectedPlace && (selectedPlace.id === place.id) }">
+      <div class="card-content">
+        <div class="card-content--title">
+          <h3>{{place.title}}</h3>
+          <div class="location" *ngIf="place.vicinity && place.id">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="javascript:;" (click)="onLocationClick(place)" [innerHTML]="place.vicinity"></a>
+          </div>
+          <p *ngIf="place.category"><i class="fas fa-clipboard-list"></i> {{place.categoryTitle}}</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
