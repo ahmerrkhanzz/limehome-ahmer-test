@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let place of places">
-    <div class="card" [ngClass]="{'active': (selectedPlace && selectedPlace.id) === place.id }">
+    <div class="card">
       <div class="card-content">
         <div class="card-content--title">
           <h3>{{place.title}}</h3>
